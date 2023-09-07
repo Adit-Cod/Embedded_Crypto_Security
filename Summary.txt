@@ -1,0 +1,2 @@
+The document intends to hold important information of the repo. Information that is critical to 
+understand the overall flow etc. 

@@ -1,0 +1,33 @@
+!SESSION 2023-09-07 10:22:38.530 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-07 10:23:02.269
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-07 10:23:02.336
+!MESSAGE Log4j initialized with config file C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-07 10:23:07.626
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-07 10:27:41.280
+!MESSAGE Indexed '0_testProject' (3 sources, 53 headers) in 1.24 sec: 1,964 declarations; 2,810 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-07 12:21:31.799
+!MESSAGE Indexed '0_testProject' (3 sources, 54 headers) in 0.285 sec: 1,978 declarations; 2,865 references; 0 unresolved inclusions; 3 syntax errors; 2 unresolved names (0.041%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-07 12:23:22.922
+!MESSAGE Indexed '0_testProject' (497 sources, 216 headers) in 8.37 sec: 26,038 declarations; 286,791 references; 13 unresolved inclusions; 124 syntax errors; 5,071 unresolved names (1.6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-07 12:24:57.960
+!MESSAGE Indexed '0_testProject' (497 sources, 216 headers) in 7.98 sec: 26,038 declarations; 286,791 references; 13 unresolved inclusions; 124 syntax errors; 5,071 unresolved names (1.6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-07 12:31:35.361
+!MESSAGE Indexed '0_testProject' (3 sources, 54 headers) in 0.145 sec: 1,978 declarations; 2,865 references; 0 unresolved inclusions; 3 syntax errors; 2 unresolved names (0.041%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-07 12:34:53.488
+!MESSAGE Indexed '0_testProject' (3 sources, 62 headers) in 0.606 sec: 3,251 declarations; 5,247 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.024%)
