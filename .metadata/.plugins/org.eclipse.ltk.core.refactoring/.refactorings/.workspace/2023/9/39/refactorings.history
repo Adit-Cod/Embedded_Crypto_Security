@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;1_systick_driver_fpu&apos; to &apos;1_system_driver-fpu&apos;" description="Rename resource &apos;1_systick_driver_fpu&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/1_systick_driver_fpu" name="1_system_driver-fpu" stamp="1696018828995" updateReferences="true"/>
+</session>
