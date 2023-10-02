@@ -1,0 +1,10 @@
+23:56:44 **** Incremental Build of configuration Debug for project 3_system_driver-timebase ****
+make -j12 all 
+arm-none-eabi-size   3_system_driver-timebase.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4236	    108	   1604	   5948	   173c	3_system_driver-timebase.elf
+Finished building: default.size.stdout
+ 
+
+23:56:44 Build Finished. 0 errors, 0 warnings. (took 309ms)
+

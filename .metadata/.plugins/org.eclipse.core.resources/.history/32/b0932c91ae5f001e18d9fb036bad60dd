@@ -1,0 +1,19 @@
+/*
+ * timebase.c
+ *
+ *  Created on: Sep 30, 2023
+ *      Author: User
+ */
+
+#include "timebase.h"
+
+void timer_init(void)
+{
+	/* Disable the  global interrupt during the running of this timer service */
+	/* Load the timer with number of clock cycles per second ; generate a tick each second */
+	/* Clear the systick current value register */
+	/* Select Internal Clock Source */
+	/* Enable Interrupt */
+	/* Enable systick */
+	/* Enable Global Interrupt */
+}

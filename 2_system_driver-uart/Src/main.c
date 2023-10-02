@@ -24,6 +24,8 @@
  * */
 
 #include <stdint.h>
+#include <stdio.h>
+
 #include "stm32f4xx.h"
 #include "fpu.h"
 #include "uart.h"
@@ -42,7 +44,7 @@ int main(void)
 	fpu_enable();
     /* initialize UART */
 	uart_init();
-    printf("Testing the USART Module!");
+    printf("Testing the USART Module!\n");
 }
 
 

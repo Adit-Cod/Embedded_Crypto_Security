@@ -1,0 +1,5 @@
+timebase.c:18:6:delay	24	static
+timebase.c:31:10:get_tickCount	4	static,ignoring_inline_asm
+timebase.c:39:13:tick_increment	4	static
+timebase.c:44:6:timer_init	4	static,ignoring_inline_asm
+timebase.c:63:6:SysTick_Handler	8	static

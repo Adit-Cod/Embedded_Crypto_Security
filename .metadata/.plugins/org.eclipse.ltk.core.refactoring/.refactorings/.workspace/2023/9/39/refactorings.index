@@ -1,1 +1,11 @@
 1696018828995	Rename resource '1_systick_driver_fpu'
+1696090513594	Delete resource '3_system_driver-timebase/0_testProject.launch'
+1696090518967	Delete resource '3_system_driver-timebase/2_system_driver-uart Debug.launch'
+1696093179685	Delete resource '3_system_driver-timebase/Debug'
+1696093558429	Delete resource '3_system_driver-timebase/Debug'
+1696093735276	Delete resource '2_system_driver-uart/Debug'
+1696093813705	Delete resource '2_system_driver-uart/Debug'
+1696093825060	Delete resource '2_system_driver-uart/0_testProject.launch'
+1696093829435	Delete resource '2_system_driver-uart/2_system_driver-uart Debug.launch'
+1696094291515	Delete resource '3_system_driver-timebase/Debug'
+1696094297915	Delete 2 resources

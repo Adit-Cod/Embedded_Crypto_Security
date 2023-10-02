@@ -1,33 +1,24 @@
-23:40:44 **** Incremental Build of configuration Debug for project 2_system_driver-uart ****
+23:56:32 **** Incremental Build of configuration Debug for project 3_system_driver-timebase ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DSTM32 -DSTM32F4 -DSTM32F446RETx -c -I../Inc -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/2_system_driver-uart/chip_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/2_system_driver-uart/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:45:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-   45 |     printf("Testing the USART Module!");
-      |     ^~~~~~
-../Src/main.c:45:5: warning: incompatible implicit declaration of built-in function 'printf'
-../Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
-   29 | #include "uart.h"
-  +++ |+#include <stdio.h>
-   30 | 
-arm-none-eabi-gcc -o "2_system_driver-uart.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\2_system_driver-uart\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_system_driver-uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 2_system_driver-uart.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DSTM32 -DSTM32F4 -DSTM32F446RETx -c -I../Inc -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/3_system_driver-timebase/chip_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/3_system_driver-timebase/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "3_system_driver-timebase.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\3_system_driver-timebase\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="3_system_driver-timebase.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 3_system_driver-timebase.elf
  
-arm-none-eabi-size   2_system_driver-uart.elf 
-arm-none-eabi-objdump -h -S  2_system_driver-uart.elf  > "2_system_driver-uart.list"
-arm-none-eabi-objcopy  -O binary  2_system_driver-uart.elf  "2_system_driver-uart.bin"
+arm-none-eabi-size   3_system_driver-timebase.elf 
+arm-none-eabi-objdump -h -S  3_system_driver-timebase.elf  > "3_system_driver-timebase.list"
+arm-none-eabi-objcopy  -O binary  3_system_driver-timebase.elf  "3_system_driver-timebase.bin"
    text	   data	    bss	    dec	    hex	filename
-   5532	    108	   1596	   7236	   1c44	2_system_driver-uart.elf
+   4236	    108	   1604	   5948	   173c	3_system_driver-timebase.elf
 Finished building: default.size.stdout
  
-Finished building: 2_system_driver-uart.bin
-Finished building: 2_system_driver-uart.list
+Finished building: 3_system_driver-timebase.bin
+Finished building: 3_system_driver-timebase.list
  
  
-23:40:55 **** Incremental Build of configuration Debug for project 2_system_driver-uart ****
+23:56:44 **** Incremental Build of configuration Debug for project 3_system_driver-timebase ****
 make -j12 all 
-arm-none-eabi-size   2_system_driver-uart.elf 
+arm-none-eabi-size   3_system_driver-timebase.elf 
    text	   data	    bss	    dec	    hex	filename
-   5532	    108	   1596	   7236	   1c44	2_system_driver-uart.elf
+   4236	    108	   1604	   5948	   173c	3_system_driver-timebase.elf
 Finished building: default.size.stdout
  

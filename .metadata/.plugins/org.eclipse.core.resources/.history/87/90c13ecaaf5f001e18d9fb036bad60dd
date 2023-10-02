@@ -1,0 +1,33 @@
+/*
+ * timebase.c
+ *
+ *  Created on: Sep 30, 2023
+ *      Author: User
+ */
+
+#include "timebase.h"
+
+volatile uint32_t current_tick;
+volatile uint32_t current_tick_p;
+
+void tick_increment(void)
+{
+	current_tick+=TICK_FREQ;
+}
+void timer_init(void)
+{
+	/* Disable the  global interrupt during the running of this timer service */
+	__disable_irq();
+	/* Load the timer with number of clock cycles per second ; generate a tick each second */
+	SysTick->LOAD = ONE_SEC_LOAD-ONE;
+	/* Clear the systick current value register */
+	SysTick->VAL = 0;
+	/* Select Internal Clock Source */
+	SysTick->CTRL = CTRL_CLKSRC;
+	/* Enable Interrupt */
+	SysTick->CTRL |= CTRL_TICKINIT;
+	/* Enable systick */
+	SysTick->CTRL |= CTRL_ENABLE;
+	/* Enable Global Interrupt */
+	__enable_irq();
+}
