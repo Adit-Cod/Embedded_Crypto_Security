@@ -1,24 +1,33 @@
-23:56:32 **** Incremental Build of configuration Debug for project 3_system_driver-timebase ****
+12:08:15 **** Incremental Build of configuration Debug for project 4_system_driver-GPIO ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DSTM32 -DSTM32F4 -DSTM32F446RETx -c -I../Inc -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/3_system_driver-timebase/chip_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/3_system_driver-timebase/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "3_system_driver-timebase.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\3_system_driver-timebase\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="3_system_driver-timebase.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 3_system_driver-timebase.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DSTM32 -DSTM32F4 -DSTM32F446RETx -c -I../Inc -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/4_system_driver-GPIO/chip_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/4_system_driver-GPIO/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "4_system_driver-GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\4_system_driver-GPIO\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_system_driver-GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_system_driver-GPIO.elf
  
-arm-none-eabi-size   3_system_driver-timebase.elf 
-arm-none-eabi-objdump -h -S  3_system_driver-timebase.elf  > "3_system_driver-timebase.list"
-arm-none-eabi-objcopy  -O binary  3_system_driver-timebase.elf  "3_system_driver-timebase.bin"
+arm-none-eabi-size   4_system_driver-GPIO.elf 
+arm-none-eabi-objdump -h -S  4_system_driver-GPIO.elf  > "4_system_driver-GPIO.list"
+arm-none-eabi-objcopy  -O binary  4_system_driver-GPIO.elf  "4_system_driver-GPIO.bin"
    text	   data	    bss	    dec	    hex	filename
-   4236	    108	   1604	   5948	   173c	3_system_driver-timebase.elf
+   4360	    108	   1604	   6072	   17b8	4_system_driver-GPIO.elf
 Finished building: default.size.stdout
  
-Finished building: 3_system_driver-timebase.bin
-Finished building: 3_system_driver-timebase.list
+Finished building: 4_system_driver-GPIO.bin
+Finished building: 4_system_driver-GPIO.list
  
  
-23:56:44 **** Incremental Build of configuration Debug for project 3_system_driver-timebase ****
+12:08:21 **** Incremental Build of configuration Debug for project 4_system_driver-GPIO ****
 make -j12 all 
-arm-none-eabi-size   3_system_driver-timebase.elf 
+arm-none-eabi-gcc -o "4_system_driver-GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\4_system_driver-GPIO\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_system_driver-GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_system_driver-GPIO.elf
+ 
+arm-none-eabi-size   4_system_driver-GPIO.elf 
+arm-none-eabi-objdump -h -S  4_system_driver-GPIO.elf  > "4_system_driver-GPIO.list"
+arm-none-eabi-objcopy  -O binary  4_system_driver-GPIO.elf  "4_system_driver-GPIO.bin"
    text	   data	    bss	    dec	    hex	filename
-   4236	    108	   1604	   5948	   173c	3_system_driver-timebase.elf
+   4360	    108	   1604	   6072	   17b8	4_system_driver-GPIO.elf
 Finished building: default.size.stdout
+ 
+Finished building: 4_system_driver-GPIO.bin
+Finished building: 4_system_driver-GPIO.list
+ 
  

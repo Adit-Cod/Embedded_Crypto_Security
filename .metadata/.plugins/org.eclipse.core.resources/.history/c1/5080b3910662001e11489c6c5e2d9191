@@ -1,0 +1,46 @@
+/*
+ * bsp.c
+ *
+ *  Created on: Oct 2, 2023
+ *      Author: User
+ */
+
+#include "bsp.h"
+
+
+void led_init(void)
+{
+	/* Provide Clock Access to the respective Peripheral */
+	/* GPIO A for stm32f44xx */
+
+	    RCC->AHB1ENR |= GPIOAEN;
+	    GPIOA->MODER |= (1U<<10);
+	    GPIOA->MODER &= ~(1U<<11);
+}
+
+void led_on(void)
+{
+	/* Set the Pin High */
+	GPIOA->ODR |= GPIO_ENABLE;
+}
+
+void led_off(void)
+{
+	/* Set the Pin Low */
+	GPIOA->ODR |= GPIO_DISABLE;
+}
+
+void button_init(void)
+{
+	RCC->AHB1ENR |= GPIOCEN;
+	GPIOC->MODER &=  ~(1<<26);
+	GPIOC->MODER &=  ~(1<<27);
+}
+
+bool get_buttonState(void)
+{
+     if(GPIOC->IDR & GPIOBTN_PIN)
+    	 return true;
+
+     return false;
+}

@@ -1,0 +1,19 @@
+12:08:21 **** Incremental Build of configuration Debug for project 4_system_driver-GPIO ****
+make -j12 all 
+arm-none-eabi-gcc -o "4_system_driver-GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\4_system_driver-GPIO\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_system_driver-GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4_system_driver-GPIO.elf
+ 
+arm-none-eabi-size   4_system_driver-GPIO.elf 
+arm-none-eabi-objdump -h -S  4_system_driver-GPIO.elf  > "4_system_driver-GPIO.list"
+arm-none-eabi-objcopy  -O binary  4_system_driver-GPIO.elf  "4_system_driver-GPIO.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4360	    108	   1604	   6072	   17b8	4_system_driver-GPIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4_system_driver-GPIO.bin
+Finished building: 4_system_driver-GPIO.list
+ 
+ 
+
+12:08:23 Build Finished. 0 errors, 0 warnings. (took 1s.119ms)
+

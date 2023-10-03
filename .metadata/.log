@@ -469,3 +469,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-30 13:17:58.757
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-02 12:51:31.131
+!MESSAGE Indexed '4_system_driver-GPIO' (6 sources, 106 headers) in 8.81 sec: 18,756 declarations; 28,966 references; 5 unresolved inclusions; 276 syntax errors; 854 unresolved names (1.8%)
