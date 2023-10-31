@@ -560,3 +560,14 @@
 
 2023-09-30 13:17:51,374 [INFO] Activator:178 - !SESSION log4j initialized
 2023-09-30 13:17:58,333 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2023-10-06 14:35:26,877 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1860862254.2011782881 uses a null category that is invalid in its context. The option was ignored.
+2023-10-06 14:35:26,884 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.1639166555.1108834928 uses a null category that is invalid in its context. The option was ignored.
+2023-10-06 14:35:26,889 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1642524283.43694985 uses a null category that is invalid in its context. The option was ignored.
+2023-10-06 14:35:26,894 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.1481501357.1904428007 uses a null category that is invalid in its context. The option was ignored.
+2023-10-06 14:35:26,899 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.1111304492.80928438 uses a null category that is invalid in its context. The option was ignored.
+2023-10-06 14:35:26,904 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1553108644.1982009876 uses a null category that is invalid in its context. The option was ignored.
+2023-10-06 14:35:26,908 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.55132931.1000740409 uses a null category that is invalid in its context. The option was ignored.
+2023-10-27 12:07:22,604 [INFO] Activator:177 - 
+
+
+2023-10-27 12:07:22,606 [INFO] Activator:178 - !SESSION log4j initialized

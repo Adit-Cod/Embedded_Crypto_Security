@@ -1,0 +1,15 @@
+/*
+ * ceasars_cipher.h
+ *
+ *  Created on: Oct 27, 2023
+ *      Author: User
+ */
+
+#ifndef INC_CEASARS_CIPHER_H_
+#define INC_CEASARS_CIPHER_H_
+#include <stdint.h>
+#include "uart.h"
+
+void ceasar_encrypt(uint8_t* plain_text, uint8_t key, uint8_t* encrypted_data, uint32_t length);
+
+#endif /* INC_CEASARS_CIPHER_H_ */

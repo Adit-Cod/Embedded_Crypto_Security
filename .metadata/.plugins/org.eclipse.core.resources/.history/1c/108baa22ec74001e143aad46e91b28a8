@@ -1,0 +1,32 @@
+/*
+ * ceasars_cipher.c
+ *
+ *  Created on: Oct 27, 2023
+ *      Author: User
+ */
+
+#include "ceasars_cipher.h"
+
+
+void ceasar_encrypt(uint8_t* plain_text, uint8_t key, uint8_t* encrypted_data, uint32_t length)
+{
+	/* Store Plaintext_data*/
+    uint8_t plaintext_data;
+
+    for(uint32_t index = 0; index < length; index++)
+    {
+    	plaintext_data = plain_text[index];
+
+    	if(plaintext_data >= 'a' && plaintext_data <= 'z')
+    	{
+    		plaintext_data = (plaintext_data - 'a' + key)%26 + 'a';
+    	}
+    	else if(plaintext_data >= 'A' && plaintext_data <= 'Z')
+    	{
+    		plaintext_data = (plaintext_data - 'Z' + key)%26 + 'A';
+    	}
+
+    	encrypted_data[index] = plaintext_data;
+    }
+    encrypted_data[length] = '\0';
+}
