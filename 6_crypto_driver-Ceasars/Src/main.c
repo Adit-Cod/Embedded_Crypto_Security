@@ -41,6 +41,12 @@
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 
+
+static uint16_t encrypted_sensor;
+static uint16_t decrypted_sensor;
+static uint16_t sensor_val = 2726;
+uint16_t Key = 100;
+
 int main(void)
 {
 	/* Enable FPU */
@@ -60,10 +66,11 @@ int main(void)
 
 	printf("Testing the Ceasar's Module!\r\n");
 	char plain_text[] = "HELLO";
+	char encrypted_testtext[] = "KHOOR";
 	uint8_t key = 3;
 	uint32_t length = (uint32_t)strlen(plain_text);
 	char* encrypted_data = (char *)calloc(length+1,sizeof(char));
-
+    char* decrypted_Data = (char *)calloc(length+1,sizeof(char));
 
 
 	printf("The length of the plain_text = %lu \r\n",length);
@@ -77,10 +84,22 @@ int main(void)
 
 	printf("\r\n Encrypted Data is:\r\n");
 	puts(encrypted_data);
-	for(int j = 0 ; j < length; j++)
-	{
-		printf("%c",encrypted_data[j]);
-	}
+    printf("Decrypting now\r\n");
+    ceasar_decrypt(encrypted_data,key,decrypted_Data,length);
+    printf("\r\n Decrypted Data is:\r\n");
+    puts(decrypted_Data);
+
+    encrypted_sensor = encrypt_Ceasar_cipher(sensor_val,Key);
+    printf("\r\n Encrypted Value of Sensor %u \r\n",encrypted_sensor);
+    decrypted_sensor = decrypt_Ceasar_cipher(encrypted_sensor, Key);
+    printf("\r\n Decrypted Value of Sensor %u \r\n",decrypted_sensor);
+
+    printf("HACKING THE CEASARS TEXT!\r\n");
+    for(int i = 0 ; i <= 25 ; i++)
+    {
+    	printf("Key Value: %d \r\n",i);
+    	ceasar_decrypt_hack(encrypted_testtext,i);
+    }
 
 }
 
