@@ -1,0 +1,66 @@
+/*
+ * timebase.c
+ *
+ *  Created on: Sep 30, 2023
+ *      Author: User
+ */
+
+#include "timebase.h"
+
+volatile uint32_t current_tick;
+volatile uint32_t current_tick_p;
+
+
+static void tick_increment(void);
+uint32_t get_tickCount(void);
+
+/* Generate Delay in Seconds */
+void delay(uint32_t delay)
+{
+	uint32_t startTick = get_tickCount();
+	uint32_t wait = delay;
+
+	if(wait<MAX_DELAY)
+	{
+		wait += (uint32_t)TICK_FREQ;
+	}
+
+	while((get_tickCount() - startTick) < wait);
+}
+
+uint32_t get_tickCount(void)
+{
+	__disable_irq();
+	current_tick_p = current_tick;
+	__enable_irq();
+	return current_tick_p;
+}
+
+static void tick_increment(void)
+{
+	current_tick += TICK_FREQ;
+}
+
+void timer_init(void)
+{
+	/* Disable the  global interrupt during the running of this timer service */
+	__disable_irq();
+	/* Load the timer with number of clock cycles per second ; generate a tick each second */
+	SysTick->LOAD = ONE_SEC_LOAD-ONE;
+	/* Clear the systick current value register */
+	SysTick->VAL  = 0;
+	/* Select Internal Clock Source */
+	SysTick->CTRL |= CTRL_CLKSRC;
+	/* Enable Interrupt */
+	SysTick->CTRL |= CTRL_TICKINIT;
+	/* Enable systick */
+	SysTick->CTRL |= CTRL_ENABLE;
+	/* Enable Global Interrupt */
+	__enable_irq();
+}
+
+
+void SysTick_Handler(void)
+{
+	tick_increment();
+}
