@@ -106,7 +106,11 @@ void decrypt_NormalizeVigenere(char* encrypted_text, char* key, char* decrypted_
 	    	decryptor = encrypted_text[i];
 	    	if(looper == keyword_length)
 	    	looper = 0;
-	    	if(decryptor >= 'A' && decryptor <= 'Z')
+	    	if(decryptor >= 'a' && decryptor <= 'z')
+	    	{
+	    		decrypted_text[i] = (( decryptor - 'a' + (key[looper++] - 'a')+ MAX_ALPHABET_LENGTH )%MAX_ALPHABET_LENGTH) + 'a';
+	    	}
+	    	else if(decryptor >= 'A' && decryptor <= 'Z')
 	    	{
 	    		decrypted_text[i] = (( decryptor - 'A' + (key[looper++] - 'A') + MAX_ALPHABET_LENGTH)%MAX_ALPHABET_LENGTH) + 'A';
 	    	}

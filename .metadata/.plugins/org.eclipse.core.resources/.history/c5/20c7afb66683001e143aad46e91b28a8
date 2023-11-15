@@ -125,9 +125,8 @@ int main(void)
     decrypt_Vigenere(encrypted_text_poly,key_poly,decrypted_text_poly);
     puts(decrypted_text_poly);
 
-    encrypt_NormalizeVigenere(plain_text_poly,key_poly, encrypted_text_poly);
-    decrypt_NormalizeVigenere(encrypted_text_poly,key_poly,decrypted_text_poly);
-    puts(decrypted_text_poly);
+    encrypt_NormalizeVigenere();
+    decrypt_NormalizeVigenere();
 }
 
 
