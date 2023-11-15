@@ -37,6 +37,7 @@
 #include "adc.h"
 #include "ceasars_cipher.h"
 #include "MonoAlphabetic_Cipher.h"
+#include "PolyAlphabetic_Cipher.h"
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -70,12 +71,18 @@ int main(void)
 	char encrypted_testtext[] = "KHOOR";
 	char plain_text_mono[] = "MONO HELLO!";
 	char key_mono[] = "DFGHIJKLMNOPQRSTUVWXYZABCETSMN";
+	char key_poly[] = "KEY";
+	char plain_text_poly[] = "POLY HELLO!";
+
 	uint8_t key = 3;
 	uint32_t length = (uint32_t)strlen(plain_text);
 	char* encrypted_data = (char *)calloc(length+1,sizeof(char));
     char* decrypted_Data = (char *)calloc(length+1,sizeof(char));
     char* encryptedtext_mono = (char*)calloc(strlen(plain_text_mono)+1, sizeof(char));
     char* decryptedtext_mono = (char*)calloc(strlen(plain_text_mono)+1, sizeof(char));
+    char* encrypted_text_poly = (char*)calloc(strlen(plain_text_poly)+1, sizeof(char));
+    char* decrypted_text_poly = (char*)calloc(strlen(plain_text_poly)+1, sizeof(char));
+
 	printf("The length of the plain_text = %lu \r\n",length);
 
 	for(int i = 0 ; i < length; i++)
@@ -110,6 +117,12 @@ int main(void)
     printf("\r\n Decryption Starts..\r\n");
     decrypt_monoalphabetic(encryptedtext_mono,key_mono, decryptedtext_mono);
     puts(decryptedtext_mono);
+
+    printf("\r\n Now Start with Poly-alphabetic Encryption\r\n");
+    puts(plain_text_poly);
+    encrypt_Vigenere(plain_text_poly, key_poly, encrypted_text_poly);
+    printf("decryption of poly_alphabetic starts now.. \r\n");
+
 
 }
 

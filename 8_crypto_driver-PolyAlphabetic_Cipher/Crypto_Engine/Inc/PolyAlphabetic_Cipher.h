@@ -2,15 +2,18 @@
  * PolyAlphabetic_Cipher.h
  *
  *  Created on: Nov 14, 2023
- *      Author: User
+ *      Author: Aditya
  */
+
 
 #ifndef INC_POLYALPHABETIC_CIPHER_H_
 #define INC_POLYALPHABETIC_CIPHER_H_
-
+#include<stdio.h>
 #include<stdint.h>
 #include<string.h>
 #include"uart.h"
+
+void encrypt_Vigenere(char* plain_text, char* key, char* encrypted_text);
 
 
 #endif /* INC_POLYALPHABETIC_CIPHER_H_ */

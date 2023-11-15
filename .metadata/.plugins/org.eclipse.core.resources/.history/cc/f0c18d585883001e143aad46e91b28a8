@@ -1,0 +1,25 @@
+/*
+ * PolyAlphabetic_Cipher.c
+ * Testing the Vigenere Cipher
+ *  Created on: Nov 14, 2023
+ *      Author: User
+ */
+
+#include "PolyAlphabetic_Cipher.h"
+
+void encrypt_Vigenere(char* plain_text, char* key, char* encrypted_text)
+{
+	printf("\r\n Vigenere Engine is now starting... \r\n");
+    char encryptor;
+    int keyword_length = strlen(key);
+
+    for(int i = 0 ; i < strlen(plain_text); i ++)
+    {
+    	encryptor = plain_text[i];
+    	if(encryptor >= 'a' && encryptor <= 'z')
+    	{
+
+    	}
+    }
+    encrypted_text[strlen(plain_text)] = '\0';
+}
