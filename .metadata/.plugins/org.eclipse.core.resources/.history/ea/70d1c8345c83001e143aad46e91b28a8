@@ -13,9 +13,7 @@
 #include<string.h>
 #include"uart.h"
 
-#define MAX_ALPHABET_LENGTH 26U
-
 void encrypt_Vigenere(char* plain_text, char* key, char* encrypted_text);
-void decrypt_Vigenere(char* encrypted_text, char* key, char* decrypted_text);
+
 
 #endif /* INC_POLYALPHABETIC_CIPHER_H_ */

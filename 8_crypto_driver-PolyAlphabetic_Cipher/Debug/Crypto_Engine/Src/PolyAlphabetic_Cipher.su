@@ -1,1 +1,2 @@
 PolyAlphabetic_Cipher.c:10:6:encrypt_Vigenere	40	static
+PolyAlphabetic_Cipher.c:36:6:decrypt_Vigenere	40	static

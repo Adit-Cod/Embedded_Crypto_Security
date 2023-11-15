@@ -46,11 +46,11 @@ void decrypt_Vigenere(char* encrypted_text, char* key, char* decrypted_text)
 	    	looper = 0;
 	    	if(decryptor >= 'a' && decryptor <= 'z')
 	    	{
-	    		decrypted_text[i] = (( decryptor - 'a' + (key[looper++] - 'a')+ MAX_ALPHABET_LENGTH )%MAX_ALPHABET_LENGTH) + 'a';
+	    		decrypted_text[i] = (( decryptor - 'a' + (key[looper++] - 'a')+ 26 )%26) + 'a';
 	    	}
 	    	else if(decryptor >= 'A' && decryptor <= 'Z')
 	    	{
-	    		decrypted_text[i] = (( decryptor - 'A' + (key[looper++] - 'A') + MAX_ALPHABET_LENGTH)%MAX_ALPHABET_LENGTH) + 'A';
+	    		decrypted_text[i] = (( decryptor - 'A' + (key[looper++] - 'A') + 26)%26) + 'A';
 	    	}
 	    	else
 	    		decrypted_text[i] = decryptor;

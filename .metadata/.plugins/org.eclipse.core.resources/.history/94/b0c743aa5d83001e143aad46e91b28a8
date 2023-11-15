@@ -121,9 +121,9 @@ int main(void)
     printf("\r\n Now Start with Poly-alphabetic Encryption\r\n");
     puts(plain_text_poly);
     encrypt_Vigenere(plain_text_poly, key_poly, encrypted_text_poly);
-    printf("Decryption of poly_alphabetic starts now.. \r\n");
+    printf("decryption of poly_alphabetic starts now.. \r\n");
     decrypt_Vigenere(encrypted_text_poly,key_poly,decrypted_text_poly);
-    puts(decrypted_text_poly);
+
 }
 
 

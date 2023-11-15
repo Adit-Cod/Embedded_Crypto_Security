@@ -21,11 +21,11 @@ void encrypt_Vigenere(char* plain_text, char* key, char* encrypted_text)
     		looper = 0;
     	if(encryptor >= 'a' && encryptor <= 'z')
     	{
-    		encrypted_text[i] = (( encryptor - 'a' + (key[looper++] - 'a'))%MAX_ALPHABET_LENGTH) + 'a';
+    		encrypted_text[i] = (( encryptor - 'a' + (key[looper++] - 'a'))%26) + 'a';
     	}
     	else if(encryptor >= 'A' && encryptor <= 'Z')
     	{
-    		encrypted_text[i] = (( encryptor - 'A' + (key[looper++] - 'A'))%MAX_ALPHABET_LENGTH) + 'A';
+    		encrypted_text[i] = (( encryptor - 'A' + (key[looper++] - 'A'))%26) + 'A';
     	}
     	else
     		encrypted_text[i] = encryptor;
@@ -46,11 +46,11 @@ void decrypt_Vigenere(char* encrypted_text, char* key, char* decrypted_text)
 	    	looper = 0;
 	    	if(decryptor >= 'a' && decryptor <= 'z')
 	    	{
-	    		decrypted_text[i] = (( decryptor - 'a' + (key[looper++] - 'a')+ MAX_ALPHABET_LENGTH )%MAX_ALPHABET_LENGTH) + 'a';
+	    		decrypted_text[i] = (( decryptor - 'a' + (key[looper++] - 'a')+ 26 )%26) + 'a';
 	    	}
 	    	else if(decryptor >= 'A' && decryptor <= 'Z')
 	    	{
-	    		decrypted_text[i] = (( decryptor - 'A' + (key[looper++] - 'A') + MAX_ALPHABET_LENGTH)%MAX_ALPHABET_LENGTH) + 'A';
+	    		decrypted_text[i] = (( decryptor - 'A' + (key[looper++] - 'A') = 26)%26) + 'A';
 	    	}
 	    	else
 	    		decrypted_text[i] = decryptor;
