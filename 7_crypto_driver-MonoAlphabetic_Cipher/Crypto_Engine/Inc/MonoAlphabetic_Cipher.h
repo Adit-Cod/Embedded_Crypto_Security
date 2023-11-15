@@ -11,5 +11,8 @@
 #include <stdint.h>
 #include "uart.h"
 
+void encrypt_monoalphabetic(char* plain_text, char* key, char* encryptedtext);
+void decrypt_monoalphabetic(char* encrypted_text, char* key, char* decryptedtext);
+
 
 #endif /* INC_MONOALPHABETIC_CIPHER_H_ */

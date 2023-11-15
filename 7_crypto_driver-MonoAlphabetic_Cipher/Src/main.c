@@ -68,12 +68,14 @@ int main(void)
 	printf("Testing the Ceasar's Module!\r\n");
 	char plain_text[] = "HELLO";
 	char encrypted_testtext[] = "KHOOR";
+	char plain_text_mono[] = "MONO HELLO!";
+	char key_mono[] = "DFGHIJKLMNOPQRSTUVWXYZABCETSMN";
 	uint8_t key = 3;
 	uint32_t length = (uint32_t)strlen(plain_text);
 	char* encrypted_data = (char *)calloc(length+1,sizeof(char));
     char* decrypted_Data = (char *)calloc(length+1,sizeof(char));
-
-
+    char* encryptedtext_mono = (char*)calloc(strlen(plain_text_mono)+1, sizeof(char));
+    char* decryptedtext_mono = (char*)calloc(strlen(plain_text_mono)+1, sizeof(char));
 	printf("The length of the plain_text = %lu \r\n",length);
 
 	for(int i = 0 ; i < length; i++)
@@ -101,6 +103,13 @@ int main(void)
     	printf("Key Value: %d \r\n",i);
     	ceasar_decrypt_hack(encrypted_testtext,i);
     }
+
+    printf("\r\n Now Start with Mono-alphabetic Encryption\r\n");
+    puts(plain_text_mono);
+    encrypt_monoalphabetic(plain_text_mono, key_mono, encryptedtext_mono);
+    printf("\r\n Decryption Starts..\r\n");
+    decrypt_monoalphabetic(encryptedtext_mono,key_mono, decryptedtext_mono);
+    puts(decryptedtext_mono);
 
 }
 

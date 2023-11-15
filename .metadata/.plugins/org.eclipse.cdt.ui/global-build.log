@@ -1,24 +1,17 @@
-11:56:46 **** Incremental Build of configuration Debug for project 6_crypto_driver-Ceasars ****
+20:12:29 **** Incremental Build of configuration Debug for project 7_crypto_driver-MonoAlphabetic_Cipher ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DSTM32 -DSTM32F4 -DSTM32F446RETx -c -I../Inc -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/6_crypto_driver-Ceasars/Crypto_Engine/Inc" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/6_crypto_driver-Ceasars/chip_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/6_crypto_driver-Ceasars/chip_header/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "6_crypto_driver-Ceasars.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\6_crypto_driver-Ceasars\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6_crypto_driver-Ceasars.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 6_crypto_driver-Ceasars.elf
+arm-none-eabi-gcc "../Crypto_Engine/Src/MonoAlphabetic_Cipher.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DSTM32 -DSTM32F4 -DSTM32F446RETx -c -I../Inc -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/Inc" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/Crypto_Engine/Inc" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/Crypto_Engine/Src" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/chip_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/chip_header/CMSIS/Include" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/6_crypto_driver-Ceasars/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Crypto_Engine/Src/MonoAlphabetic_Cipher.d" -MT"Crypto_Engine/Src/MonoAlphabetic_Cipher.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Crypto_Engine/Src/MonoAlphabetic_Cipher.o"
+arm-none-eabi-gcc -o "7_crypto_driver-MonoAlphabetic_Cipher.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\7_crypto_driver-MonoAlphabetic_Cipher\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_crypto_driver-MonoAlphabetic_Cipher.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 7_crypto_driver-MonoAlphabetic_Cipher.elf
  
-arm-none-eabi-size   6_crypto_driver-Ceasars.elf 
-arm-none-eabi-objdump -h -S  6_crypto_driver-Ceasars.elf  > "6_crypto_driver-Ceasars.list"
-arm-none-eabi-objcopy  -O binary  6_crypto_driver-Ceasars.elf  "6_crypto_driver-Ceasars.bin"
+arm-none-eabi-size   7_crypto_driver-MonoAlphabetic_Cipher.elf 
+arm-none-eabi-objdump -h -S  7_crypto_driver-MonoAlphabetic_Cipher.elf  > "7_crypto_driver-MonoAlphabetic_Cipher.list"
+arm-none-eabi-objcopy  -O binary  7_crypto_driver-MonoAlphabetic_Cipher.elf  "7_crypto_driver-MonoAlphabetic_Cipher.bin"
    text	   data	    bss	    dec	    hex	filename
-   7748	    112	   1608	   9468	   24fc	6_crypto_driver-Ceasars.elf
+   8392	    112	   1608	  10112	   2780	7_crypto_driver-MonoAlphabetic_Cipher.elf
 Finished building: default.size.stdout
  
-Finished building: 6_crypto_driver-Ceasars.bin
-Finished building: 6_crypto_driver-Ceasars.list
+Finished building: 7_crypto_driver-MonoAlphabetic_Cipher.bin
+Finished building: 7_crypto_driver-MonoAlphabetic_Cipher.list
  
- 
-11:57:00 **** Incremental Build of configuration Debug for project 6_crypto_driver-Ceasars ****
-make -j12 all 
-arm-none-eabi-size   6_crypto_driver-Ceasars.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7748	    112	   1608	   9468	   24fc	6_crypto_driver-Ceasars.elf
-Finished building: default.size.stdout
  

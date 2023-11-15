@@ -1,0 +1,11 @@
+/*
+ * MonoAlphabetic_Cipher.c
+ *
+ *  Created on: Nov 2, 2023
+ *      Author: User
+ */
+#include<string.h>
+#include "MonoAlphabetic_Cipher.h"
+#include"uart.h"
+
+void

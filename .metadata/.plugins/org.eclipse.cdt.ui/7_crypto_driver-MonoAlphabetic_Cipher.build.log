@@ -1,0 +1,20 @@
+20:12:29 **** Incremental Build of configuration Debug for project 7_crypto_driver-MonoAlphabetic_Cipher ****
+make -j12 all 
+arm-none-eabi-gcc "../Crypto_Engine/Src/MonoAlphabetic_Cipher.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DSTM32 -DSTM32F4 -DSTM32F446RETx -c -I../Inc -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/Inc" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/Crypto_Engine/Inc" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/Crypto_Engine/Src" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/chip_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/7_crypto_driver-MonoAlphabetic_Cipher/chip_header/CMSIS/Include" -I"C:/Ad_Docs/Embedded Systems/Embedded_Cryptography_Encryption/Embedded_Crypto_Security/6_crypto_driver-Ceasars/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Crypto_Engine/Src/MonoAlphabetic_Cipher.d" -MT"Crypto_Engine/Src/MonoAlphabetic_Cipher.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Crypto_Engine/Src/MonoAlphabetic_Cipher.o"
+arm-none-eabi-gcc -o "7_crypto_driver-MonoAlphabetic_Cipher.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Ad_Docs\Embedded Systems\Embedded_Cryptography_Encryption\Embedded_Crypto_Security\7_crypto_driver-MonoAlphabetic_Cipher\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_crypto_driver-MonoAlphabetic_Cipher.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 7_crypto_driver-MonoAlphabetic_Cipher.elf
+ 
+arm-none-eabi-size   7_crypto_driver-MonoAlphabetic_Cipher.elf 
+arm-none-eabi-objdump -h -S  7_crypto_driver-MonoAlphabetic_Cipher.elf  > "7_crypto_driver-MonoAlphabetic_Cipher.list"
+arm-none-eabi-objcopy  -O binary  7_crypto_driver-MonoAlphabetic_Cipher.elf  "7_crypto_driver-MonoAlphabetic_Cipher.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8392	    112	   1608	  10112	   2780	7_crypto_driver-MonoAlphabetic_Cipher.elf
+Finished building: default.size.stdout
+ 
+Finished building: 7_crypto_driver-MonoAlphabetic_Cipher.bin
+Finished building: 7_crypto_driver-MonoAlphabetic_Cipher.list
+ 
+ 
+
+20:12:30 Build Finished. 0 errors, 0 warnings. (took 1s.318ms)
+
