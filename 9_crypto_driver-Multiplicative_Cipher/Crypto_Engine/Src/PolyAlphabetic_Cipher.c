@@ -1,0 +1,118 @@
+/*
+ * PolyAlphabetic_Cipher.c
+ * Testing the Vigenere Cipher
+ *  Created on: Nov 14, 2023
+ *      Author: User
+ */
+
+#include "PolyAlphabetic_Cipher.h"
+
+void encrypt_Vigenere(char* plain_text, char* key, char* encrypted_text)
+{
+	printf("\r\n Vigenere Engine is now starting... \r\n");
+    char encryptor;
+    int keyword_length = strlen(key);
+    int looper = 0 ;
+    for(int i = 0 ; i < strlen(plain_text); i ++)
+    {
+    	encryptor = plain_text[i];
+
+    	if(looper == keyword_length)
+    		looper = 0;
+    	if(encryptor >= 'a' && encryptor <= 'z')
+    	{
+    		encrypted_text[i] = (( encryptor - 'a' + (key[looper++] - 'a'))%MAX_ALPHABET_LENGTH) + 'a';
+    	}
+    	else if(encryptor >= 'A' && encryptor <= 'Z')
+    	{
+    		encrypted_text[i] = (( encryptor - 'A' + (key[looper++] - 'A'))%MAX_ALPHABET_LENGTH) + 'A';
+    	}
+    	else
+    		encrypted_text[i] = encryptor;
+    }
+    encrypted_text[strlen(plain_text)] = '\0';
+}
+
+void decrypt_Vigenere(char* encrypted_text, char* key, char* decrypted_text)
+{
+	    printf("\r\n Vigenere Engine is now Decrypting ... \r\n");
+	    char decryptor;
+	    int keyword_length = strlen(key);
+	    int looper = 0 ;
+	    for(int i = 0 ; i < strlen(encrypted_text); i ++)
+	    {
+	    	decryptor = encrypted_text[i];
+	    	if(looper == keyword_length)
+	    	looper = 0;
+	    	if(decryptor >= 'a' && decryptor <= 'z')
+	    	{
+	    		decrypted_text[i] = (( decryptor - 'a' + (key[looper++] - 'a')+ MAX_ALPHABET_LENGTH )%MAX_ALPHABET_LENGTH) + 'a';
+	    	}
+	    	else if(decryptor >= 'A' && decryptor <= 'Z')
+	    	{
+	    		decrypted_text[i] = (( decryptor - 'A' + (key[looper++] - 'A') + MAX_ALPHABET_LENGTH)%MAX_ALPHABET_LENGTH) + 'A';
+	    	}
+	    	else
+	    		decrypted_text[i] = decryptor;
+	    }
+	    decrypted_text[strlen(encrypted_text)] = '\0';
+}
+
+void PolyAlphabetic_KeyNormalize(char* key)
+{
+   char key_norm;
+   for(int i = 0 ; i < strlen(key); i++)
+   {
+		   key[i] = toupper(key[i]);
+	}
+}
+
+void encrypt_NormalizeVigenere(char* plain_text, char* key, char* encrypted_text)
+{
+	printf("\r\n Normalized Vigenere Engine is now starting... \r\n");
+    char encryptor;
+    int keyword_length = strlen(key);
+    int looper = 0 ;
+    PolyAlphabetic_KeyNormalize(key);
+    PolyAlphabetic_KeyNormalize(plain_text);
+    for(int i = 0 ; i < strlen(plain_text); i ++)
+    {
+    	encryptor = plain_text[i];
+
+    	if(looper == keyword_length)
+    		looper = 0;
+
+    	if(encryptor >= 'A' && encryptor <= 'Z')
+    	{
+    		encrypted_text[i] = (( encryptor - 'A' + (key[looper++] - 'A'))%MAX_ALPHABET_LENGTH) + 'A';
+    	}
+    	else
+    		encrypted_text[i] = encryptor;
+    }
+    encrypted_text[strlen(plain_text)] = '\0';
+}
+
+void decrypt_NormalizeVigenere(char* encrypted_text, char* key, char* decrypted_text)
+{
+	    printf("\r\n Normalized Vigenere Engine is now Decrypting ... \r\n");
+	    char decryptor;
+	    int keyword_length = strlen(key);
+	    int looper = 0 ;
+	    PolyAlphabetic_KeyNormalize(key);
+	    PolyAlphabetic_KeyNormalize(encrypted_text);
+
+	    for(int i = 0 ; i < strlen(encrypted_text); i ++)
+	    {
+	    	decryptor = encrypted_text[i];
+	    	if(looper == keyword_length)
+	    	looper = 0;
+	    	if(decryptor >= 'A' && decryptor <= 'Z')
+	    	{
+	    		decrypted_text[i] = (( decryptor - 'A' + (key[looper++] - 'A') + MAX_ALPHABET_LENGTH)%MAX_ALPHABET_LENGTH) + 'A';
+	    	}
+	    	else
+	    		decrypted_text[i] = decryptor;
+	    }
+	    decrypted_text[strlen(encrypted_text)] = '\0';
+}
+
