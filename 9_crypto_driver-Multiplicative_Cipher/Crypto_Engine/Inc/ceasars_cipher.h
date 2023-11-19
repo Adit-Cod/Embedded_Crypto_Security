@@ -8,7 +8,7 @@
 #ifndef INC_CEASARS_CIPHER_H_
 #define INC_CEASARS_CIPHER_H_
 
-
+#include<stdio.h>
 #include <stdint.h>
 #include "uart.h"
 

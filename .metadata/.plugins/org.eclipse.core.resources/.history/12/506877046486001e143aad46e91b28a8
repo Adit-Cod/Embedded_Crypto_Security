@@ -1,0 +1,40 @@
+/*
+ * Multiplicative_Cipher.c
+ *
+ *  Created on: Nov 14, 2023
+ *      Author: User
+ */
+#include "Multiplicative_Cipher.h"
+
+static int mod_inverse(int a, int m);
+
+void encryptive_multiplicative(char* plain_text, int key,char* encrypted_text )
+{
+	char encryptor;
+	printf("Multiplicative Engine Has Started\r\n");
+	for(int i = 0 ; i< strlen(plain_text); i++)
+	{
+		encryptor = plain_text[i];
+		if(encryptor >'a' && encryptor < 'z')
+		{
+			encryptor = ((encryptor - 'a')*key) % MAX_ALPHA_CHARACTERS + 'a';
+		}
+		else if(encryptor >'A' && encryptor < 'Z')
+		{
+			encryptor = ((encryptor - 'A')*key) % MAX_ALPHA_CHARACTERS + 'A';
+		}
+		encrypted_text[i] = encryptor;
+	}
+	encrypted_text[strlen(plain_text)] = '\0';
+}
+
+static int mod_inverse(int a, int m)
+{
+
+	for(int i = 1; i < m ; i++)
+	{
+		if((a*i) % m == 1)
+			return i;
+	}
+	return -1;
+}

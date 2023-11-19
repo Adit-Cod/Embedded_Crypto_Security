@@ -5,3 +5,64 @@
  *      Author: User
  */
 #include "Multiplicative_Cipher.h"
+
+static int mod_inverse(int a, int m);
+
+void encryptive_multiplicative(char* plain_text, int key,char* encrypted_text )
+{
+	char encryptor;
+	printf("Multiplicative Engine Has Started\r\n");
+	for(int i = 0 ; i< strlen(plain_text); i++)
+	{
+		encryptor = plain_text[i];
+		if(encryptor >='a' && encryptor <= 'z')
+		{
+			encryptor = ((encryptor - 'a')*key) % MAX_ALPHA_CHARACTERS + 'a';
+		}
+		else if(encryptor >='A' && encryptor <= 'Z')
+		{
+			encryptor = ((encryptor - 'A')*key) % MAX_ALPHA_CHARACTERS + 'A';
+		}
+		encrypted_text[i] = encryptor;
+	}
+	encrypted_text[strlen(plain_text)] = '\0';
+}
+
+static int mod_inverse(int a, int m)
+{
+
+	for(int i = 1; i < m ; i++)
+	{
+		if((a*i) % m == 1)
+			return i;
+	}
+	return -1;
+}
+
+void decrypt_multiplicative(char* encrypted_text, int key, char* decrypted_text)
+{
+	char decryptor;
+	int key_inv;
+	printf("Multiplicative Decrypt Engine has now started\r\n");
+    key_inv = mod_inverse(key,MAX_ALPHA_CHARACTERS);
+    if(key_inv == -1)
+    {
+    	printf("ERROR\r\n");
+    	return;
+    }
+	for(int i = 0 ; i < strlen(encrypted_text); i++)
+	{
+        decryptor = encrypted_text[i];
+
+        if(decryptor >= 'a' && decryptor <= 'z')
+        {
+              decryptor = ((decryptor - 'a')* key_inv) % MAX_ALPHA_CHARACTERS + 'a';
+        }
+        else if(decryptor >= 'A' && decryptor <= 'Z')
+        {
+              decryptor = ((decryptor - 'A')* key_inv) % MAX_ALPHA_CHARACTERS + 'A';
+        }
+        decrypted_text[i] = decryptor;
+	}
+	decrypted_text[strlen(encrypted_text)] = '\0';
+}

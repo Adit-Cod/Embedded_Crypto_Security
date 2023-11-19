@@ -1,0 +1,3 @@
+Multiplicative_Cipher.c:11:6:encryptive_multiplicative	32	static
+Multiplicative_Cipher.c:31:12:mod_inverse	24	static
+Multiplicative_Cipher.c:42:6:decrypt_multiplicative	40	static

@@ -1,0 +1,2 @@
+MonoAlphabetic_Cipher.c:12:6:encrypt_monoalphabetic	32	static
+MonoAlphabetic_Cipher.c:36:6:decrypt_monoalphabetic	40	static

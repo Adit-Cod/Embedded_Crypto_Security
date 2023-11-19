@@ -21,5 +21,5 @@ void encrypt_Vigenere(char* plain_text, char* key, char* encrypted_text);
 void decrypt_Vigenere(char* encrypted_text, char* key, char* decrypted_text);
 void PolyAlphabetic_KeyNormalize(char* key);
 void encrypt_NormalizeVigenere(char* plain_text, char* key, char* encrypted_text);
-
+void decrypt_NormalizeVigenere(char* encrypted_text, char* key, char* decrypted_text);
 #endif /* INC_POLYALPHABETIC_CIPHER_H_ */

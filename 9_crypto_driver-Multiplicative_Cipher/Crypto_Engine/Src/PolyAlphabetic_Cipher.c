@@ -60,7 +60,7 @@ void decrypt_Vigenere(char* encrypted_text, char* key, char* decrypted_text)
 
 void PolyAlphabetic_KeyNormalize(char* key)
 {
-   char key_norm;
+   //char key_norm;
    for(int i = 0 ; i < strlen(key); i++)
    {
 		   key[i] = toupper(key[i]);

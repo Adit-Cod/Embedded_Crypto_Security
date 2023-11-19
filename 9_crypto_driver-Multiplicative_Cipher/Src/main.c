@@ -49,6 +49,7 @@ static uint16_t encrypted_sensor;
 static uint16_t decrypted_sensor;
 static uint16_t sensor_val = 2726;
 uint16_t Key = 100;
+int key_multiplicative = 0x3;
 
 int main(void)
 {
@@ -74,15 +75,19 @@ int main(void)
 	char key_mono[] = "DFGHIJKLMNOPQRSTUVWXYZABCETSMN";
 	char key_poly[] = "KEY";
 	char plain_text_poly[] = "POLY HELLO!";
+	char plain_text_multiplicative[] = "HELLO MULTIPLICATIVE!";
 
-	uint8_t key = 3;
+	uint8_t  key = 3;
 	uint32_t length = (uint32_t)strlen(plain_text);
 	char* encrypted_data = (char *)calloc(length+1,sizeof(char));
-    char* decrypted_Data = (char *)calloc(length+1,sizeof(char));
+	char* encrypteddata_multiplicative = (char*)calloc(strlen(plain_text_multiplicative)+1, sizeof(char));
     char* encryptedtext_mono = (char*)calloc(strlen(plain_text_mono)+1, sizeof(char));
-    char* decryptedtext_mono = (char*)calloc(strlen(plain_text_mono)+1, sizeof(char));
     char* encrypted_text_poly = (char*)calloc(strlen(plain_text_poly)+1, sizeof(char));
+
+    char* decrypted_Data = (char *)calloc(length+1,sizeof(char));
+    char* decryptedtext_mono = (char *)calloc(strlen(plain_text_mono)+1, sizeof(char));
     char* decrypted_text_poly = (char*)calloc(strlen(plain_text_poly)+1, sizeof(char));
+    char* decryptedtext_multiplicative = (char*)calloc(strlen(plain_text_multiplicative)+1, sizeof(char));
 
 	printf("The length of the plain_text = %lu \r\n",length);
 
@@ -108,15 +113,17 @@ int main(void)
     printf("HACKING THE CEASARS TEXT!\r\n");
     for(int i = 0 ; i <= 25 ; i++)
     {
-    	printf("Key Value: %d \r\n",i);
+    	//printf("Key Value: %d \r\n",i);
     	ceasar_decrypt_hack(encrypted_testtext,i);
     }
 
     printf("\r\n Now Start with Mono-alphabetic Encryption\r\n");
     puts(plain_text_mono);
     encrypt_monoalphabetic(plain_text_mono, key_mono, encryptedtext_mono);
-    printf("\r\n Decryption Starts..\r\n");
+    puts(encryptedtext_mono);
     decrypt_monoalphabetic(encryptedtext_mono,key_mono, decryptedtext_mono);
+    for(int i = 0 ; i < strlen(decryptedtext_mono); i++)
+    	printf("%c",decryptedtext_mono[i]);
     puts(decryptedtext_mono);
 
     printf("\r\n Now Start with Poly-alphabetic Encryption\r\n");
@@ -126,9 +133,17 @@ int main(void)
     decrypt_Vigenere(encrypted_text_poly,key_poly,decrypted_text_poly);
     puts(decrypted_text_poly);
 
+    printf("\r\n Now Start with Normalized Poly-alphabetic Encryption\r\n");
+    puts(plain_text_poly);
     encrypt_NormalizeVigenere(plain_text_poly,key_poly, encrypted_text_poly);
     decrypt_NormalizeVigenere(encrypted_text_poly,key_poly,decrypted_text_poly);
     puts(decrypted_text_poly);
+
+    printf("\r\n Multiplicative Cipher Testing \r\n");
+    puts(plain_text_multiplicative);
+    encryptive_multiplicative(plain_text_multiplicative,key_multiplicative,encrypteddata_multiplicative);
+    decrypt_multiplicative(encrypteddata_multiplicative,key_multiplicative,decryptedtext_multiplicative);
+    puts(decryptedtext_multiplicative);
 }
 
 

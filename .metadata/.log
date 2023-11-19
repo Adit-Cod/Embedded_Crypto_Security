@@ -602,3 +602,12 @@ C Model Exception: C Model Status [Element ceasars_cipher.h does not exist.]
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-11-14 22:42:05.651
 !MESSAGE Indexed '9_crypto_driver-Multiplicative_Cipher' (11 sources, 121 headers) in 8.83 sec: 19,880 declarations; 31,332 references; 9 unresolved inclusions; 276 syntax errors; 854 unresolved names (1.6%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-11-18 17:59:49.626
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-11-18 18:00:47.819
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-11-18 18:02:50.445
+!MESSAGE Won't launch debug session since we failed to locate the binary.

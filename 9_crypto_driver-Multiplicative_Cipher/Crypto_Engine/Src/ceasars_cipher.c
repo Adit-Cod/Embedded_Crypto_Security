@@ -65,7 +65,7 @@ uint16_t decrypt_Ceasar_cipher(uint16_t encrypted_value, uint16_t key)
 
 void ceasar_decrypt_hack(char* encrypted_text, uint8_t key)
 {
-	printf("\r\n Starting Decryption Hack Engine \r\n");
+	//printf("\r\n Starting Decryption Hack Engine for ceasar cipher \r\n");
     uint8_t encrypted_Data;
 
     for(int index = 0 ; encrypted_text[index] != '\0'; index ++)
@@ -75,16 +75,14 @@ void ceasar_decrypt_hack(char* encrypted_text, uint8_t key)
         if(encrypted_Data >= 'a' && encrypted_Data <= 'z')
         {
         	encrypted_Data = (encrypted_Data - 'a' - key + MAX_NO_OF_ENGLISH_ALPHABETS ) % MAX_NO_OF_ENGLISH_ALPHABETS + 'a';
-        	printf("%c",encrypted_Data);
+        	//printf("%c",encrypted_Data);
         }
         else if(encrypted_Data >= 'A' && encrypted_Data <= 'Z')
         {
             encrypted_Data = (encrypted_Data - 'A' - key + MAX_NO_OF_ENGLISH_ALPHABETS ) % MAX_NO_OF_ENGLISH_ALPHABETS + 'A';
-            printf("%c",encrypted_Data);
+            //printf("%c",encrypted_Data);
         }
-        else
-        	printf("%c",encrypted_Data);
     }
-    printf("\r\n");
+    //printf("\r\n");
 
 }

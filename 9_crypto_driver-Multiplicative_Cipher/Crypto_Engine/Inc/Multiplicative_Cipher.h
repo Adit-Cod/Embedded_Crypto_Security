@@ -13,5 +13,9 @@
 #include<string.h>
 #include"uart.h"
 
+#define MAX_ALPHA_CHARACTERS 26U
+
+void encryptive_multiplicative(char* plain_text, int key,char* encrypted_text );
+void decrypt_multiplicative(char* encrypted_text, int key, char* decrypted_text);
 
 #endif /* INC_MULTIPLICATIVE_CIPHER_H_ */
